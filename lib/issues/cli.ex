@@ -74,5 +74,6 @@ defmodule Issues.CLI do
   def sort_into_ascending_order(list_of_issues) do
     Enum.sort list_of_issues,
               fn i1, i2 -> i1["created_at"] <= i2["created_at"] end
+    #Enum.sort list_of_issues, &(&1["created_at"] <= &2["created_at"])
   end
 end
