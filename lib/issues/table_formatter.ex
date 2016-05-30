@@ -77,6 +77,7 @@ defmodule Issues.TableFormatter do
   """
   def format_for(column_widths) do
     map_join(column_widths, " | ", fn width -> "~-#{width}s" end) <> "~n"
+    #map_join(column_widths, " | ", &("~-#{&1}s")) <> "~n"
   end
 
   @doc """
